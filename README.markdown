@@ -16,6 +16,13 @@ page worth of memory.
 
 # Using the library
 
+```
+$ git clone https://github.com/mhcrnl/c-minheap-array
+$ cd c-minheap-array
+$ make
+$ ./test
+```
+
 To use the library you only need to include the heap.h header, and
 link against the heap.c file. There is nothing fancy required.
 

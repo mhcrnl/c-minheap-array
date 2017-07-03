@@ -1,4 +1,4 @@
-CFLAGS = -Wall -std=c99 -O2
+CFLAGS = -Wall -std=gnu99 -O2
 DEPS=main.o heap.o
 PRGM=test
 

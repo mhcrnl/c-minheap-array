@@ -3,7 +3,7 @@
  * These are used to create and manipulate a heap
  * data structure.
  */
-
+#include <string.h>
 #include <unistd.h>
 #include <sys/mman.h>
 #include <assert.h>
@@ -51,7 +51,7 @@ static void* map_in_pages(int page_count) {
     assert(page_count > 0);
 
     // Call mmmap to get the pages
-    void* addr = mmap(NULL, page_count*PAGE_SIZE, PROT_READ|PROT_WRITE, MAP_ANON|MAP_PRIVATE, -1, 0);
+    void* addr = mmap(NULL, page_count*PAGE_SIZE, PROT_READ|PROT_WRITE, MAP_ANONYMOUS|MAP_PRIVATE, -1, 0);
 
     if (addr == MAP_FAILED)
         return NULL;
